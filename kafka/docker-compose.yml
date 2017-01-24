@@ -1,0 +1,11 @@
+version: '2'
+services:
+  kafka:
+    build: .
+    ports:
+     - "2181:2181"
+     - "9092:9092"
+    environment:
+     - NUM_PARTITIONS=9
+     - ADVERTISED_PORT=9092
+     - ADVERTISED_HOST=127.0.0.1
